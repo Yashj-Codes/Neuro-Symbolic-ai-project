@@ -2,10 +2,77 @@
 
 This project demonstrates a simple neuro-symbolic AI system, combining symbolic reasoning with neural network modules. Inspired by the ExtensityAI/symbolicai repository, this implementation is original and provides a foundation for further research and experimentation.
 
-## Features
-- Symbolic reasoner for knowledge representation and inference
-- Neural module for basic vector transformations
-- Example usage integrating both symbolic and neural components
+# 🚀 Project Overview
+
+The Neuro-Symbolic Legal Reasoning System is a hybrid AI application that combines neural networks and symbolic reasoning to analyze legal documents, such as contracts, and generate explainable conclusions.
+
+Neural Extraction: Uses NLP models (e.g., Legal-BERT) to extract parties, obligations, dates, conditions, and exceptions from contract clauses.
+
+Symbolic Reasoning: Applies predefined rules using symbolic logic (Prolog or SymbolicAI) to determine breaches, liability, and rights.
+
+Explainability: Produces a reasoning chain that shows exactly why a decision was made.
+
+Demo Ready: Can be extended with a simple web interface using Streamlit or Flask for interactive use.
+
+This project showcases the integration of modern deep learning with traditional symbolic AI, making decisions interpretable and auditable.
+
+💡 Key Features
+
+- Contract Clause Analysis
+  - Extracts entities like parties, obligations, payment terms, and exceptions.
+  - Converts extracted data into structured symbolic facts.
+- Rule-Based Reasoning
+  - Implements logical rules for breach detection.
+  - Handles exceptions, conditions, and temporal constraints.
+- Explainable Output
+  - Generates human-readable explanations showing the reasoning steps.
+  - Outputs structured facts, applied rules, and final conclusions.
+- Extensible Architecture
+  - Easy to add new domain-specific rules.
+  - Can integrate with neural models for other domains (e.g., traffic laws).
+
+🏗️ Project Architecture
+```
+   +-----------------+
+   |  Input Clause   |
+   |  (Contract)     |
+   +--------+--------+
+            |
+            v
+   +-----------------+
+   | Neural Extractor|
+   | (Legal-BERT,   |
+   |  spaCy NER)     |
+   +--------+--------+
+            |
+            v
+   +-----------------+
+   | Symbolic Mapper |
+   | (Prolog/KB)     |
+   +--------+--------+
+            |
+            v
+   +-----------------+
+   | Rule Engine     |
+   | (Logic/Contracts|
+   |  SymbolicAI)    |
+   +--------+--------+
+            |
+            v
+   +-----------------+
+   | Explanation Gen |
+   | (Reasoning Chain|
+   +-----------------+
+```
+
+🛠️ Technologies Used
+
+- Symbolic Reasoning: Prolog / SymbolicAI
+- Neural NLP Models: Legal-BERT, spaCy
+- Programming Language: Python 3.11+
+- Web Interface (optional): Streamlit / Flask
+- Version Control: Git + GitHub
+- Visualization: Reasoning chains printed or displayed in UI
 
 ## Getting Started
 1. Clone this repository.
