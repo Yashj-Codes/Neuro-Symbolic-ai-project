@@ -7,6 +7,13 @@
             "command": "python main.py",
             "group": "build",
             "problemMatcher": []
+        },
+        {
+            "label": "Run Neuro-Symbolic Streamlit App",
+            "type": "shell",
+            "command": "source ../.venv/bin/activate && streamlit run main.py",
+            "group": "build",
+            "problemMatcher": []
         }
     ]
 }
